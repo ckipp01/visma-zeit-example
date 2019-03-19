@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "visma",
+  "builds": [
+    { "src": "api/*.js", "use": "@now/node" },
+    { "src": "*.html", "use": "@now/static" }
+  ],
+    "routes": [
+      { "src": "/about", "dest": "about.html" },
+      { "src": "/date", "dest": "api/date.js" },
+      { "src": "/sort", "methods": ["POST"], "dest": "api/sort.js" }
+    ]
+}
